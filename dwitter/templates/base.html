@@ -1,0 +1,42 @@
+<!-- dwitter/templates/base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Dwitter</title>
+    <link rel="stylesheet" href="{% static 'css/dwitter.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dwitter-pages.css' %}">
+</head>
+<body>
+    <section class=" is-success mb-4">
+        <div class="hero-body">
+            <!-- <h1 class="title is-1"></h1> -->
+            <img src={% static "css/main_image.jpg" %}>
+            <p> ログアウトは
+                <a href="{% url 'Logout' %}">こちら</a> <br>
+                <hr>
+                <a href="{% url 'dashboard' %}">ホーム</a> <br>
+                <hr>
+                <a href="{% url 'profile_list' %}">マッチング</a> <br>
+                <hr>
+            </p>
+                <p class="login__user">{{user.account.last_name}}　{{user.account.first_name}}</p>
+            
+        </div>
+
+        <div class="containera">
+            <div class="">
+    
+                {% block content %}
+    
+                {% endblock content %}
+    
+            </div>
+        </div>
+</body>
+</html>

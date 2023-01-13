@@ -1,0 +1,41 @@
+body {
+    background-image: url(../css/BackGroundSample.jpg);
+}
+
+/* body img {
+    height: 130px;
+    width: 300px;
+} */
+
+.hero-body {
+  height: 100%;
+  width: 20%; /*　画面左半分にします　*/
+  background-color: #00CCFF;
+  box-sizing: border-box;
+  border: 8px solid rgb(203, 203, 203);
+  position: fixed;
+}
+
+.hero-body a{
+    color: #fff;
+}
+
+.containera {
+    height: 100%;
+    padding-left: 25em;
+    /*　右半分　*/
+}
+
+.container .profile p{
+    text-align: center;
+}
+
+.container > .column > .plofilee > p {
+    margin: auto;
+}
+
+.login__user{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(233, 225, 225);
+}

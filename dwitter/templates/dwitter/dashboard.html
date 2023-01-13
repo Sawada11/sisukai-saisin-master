@@ -1,0 +1,32 @@
+<!-- dwitter/templates/dwitter/dashboard.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="column">
+
+
+
+<div class="column">
+    <div class="block">
+        <div class="row ">
+            
+            {% for follower in user.profile.followed_by.all %}
+                <div class="">
+                    <a href="{% url 'UserView' follower.user.id %} ">
+                        <img src="{{ follower.user.account.account_image.url}}" alt="{{ follower.account.account_image}}" class="card-img-top">
+                        <p>{{ follower.user.account.last_name }}　{{ follower.user.account.first_name }}</p>
+                        <p>{{ follower.user.account.hobby }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+{% endblock content %}

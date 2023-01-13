@@ -1,0 +1,29 @@
+.row{
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.comment{
+    padding-bottom: 10px;
+}
+#id_body{
+    padding: 15px;
+}
+.center{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.search{
+    padding: 15px;
+}
+
+.btn{
+    padding: 15px;
+}

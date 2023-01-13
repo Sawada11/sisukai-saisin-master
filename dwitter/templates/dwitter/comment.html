@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="box">
+    <p class="comment"> {{ dweet.body }}</p>
+   
+    <a href="{% url 'commentCreate' object.pk %}" class="btn btn-primary">コメント</a>
+
+    <section class="
+     comment">
+        
+        {% for comment in comment.all %}
+
+<div class="">
+ {% if dweet.id == comment.dweet.id %}
+ <div class="comment">
+    <a href="{% url 'profile' comment.user.id %}">
+    <p>{{ comment.user.account.last_name}}
+        {{ comment.user.account.first_name}}
+    </p>
+</a>
+ <p>{{ comment.body }}</p>
+</div>
+    {% if user.account.id == comment.user.account.id %}
+<a href="{% url 'commentUpdate' comment.pk %}" class="btn btn-primary">編集する</a>
+<a href="{% url 'commentDelete' comment.id %}" class="btn btn-primary">削除</a>
+{% endif %}
+{% endif %}
+{% endfor %}
+    </section>
+</section>
+
+{% endblock content %}
