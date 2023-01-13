@@ -21,6 +21,8 @@ class AccountForm(forms.ModelForm):
         # フィールド名指定
         labels = {'username':"ユーザーID",'email':"メール"}
 
+    
+
 class AddAccountForm(forms.ModelForm):
     class Meta():
         # モデルクラスを指定
