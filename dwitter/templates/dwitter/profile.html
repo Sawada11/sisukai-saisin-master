@@ -9,6 +9,7 @@
 
     <div>
         <img src="{{ profile.user.account.account_image.url}}" alt="{{ account.account_image}}" class="card-img-top">
+        <p>ID:{{profile.user.username}}</p>
         <p>{{profile.user.account.last_name}}　{{profile.user.account.first_name}}</p>
         <p>{{profile.user.account.age}}</p>
         <p>{{profile.user.account.area}}</p>
@@ -39,7 +40,8 @@
     <div class="content">
 
         {% for dweet in profile.user.dweets.all %}
-            <div class="box">
+         
+        <div class="box">
                 {{ dweet.body }}
                 <span class="is-small has-text-grey-light">
                     ({{ dweet.created_at }})
